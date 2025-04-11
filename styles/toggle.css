@@ -1,11 +1,23 @@
-.switch {
-  position: relative;
-  display: inline-block;
-  min-width: 7rem;
-  height: 3.4rem;
+.toggle-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.switch input {
+.toggle-title {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 7rem;
+  height: 3.4rem;
+  align-items: center;
+}
+
+.toggle input {
   visibility: hidden;
 }
 
@@ -43,7 +55,7 @@ input:checked + .slider:before {
 
 .slider::after {
   content: 'CLOSE';
-  color: #fff;
+  color: #6f6f6f;
   font-size: 1rem;
   position: absolute;
   right: 0.7rem;
@@ -53,4 +65,5 @@ input:checked + .slider:before {
 input:checked + .slider::after {
   content: 'OPEN';
   left: 0.8rem;
+  color: #fff;
 }

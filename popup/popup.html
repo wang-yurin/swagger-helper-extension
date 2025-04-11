@@ -11,14 +11,21 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/reset.css" />
+    <link rel="stylesheet" href="popup.css" />
     <link rel="stylesheet" href="../styles/toggle.css" />
   </head>
   <body>
-    <div class="toggle-container">
-      <label class="switch">
-        <input type="checkbox" id="toggleSwitch" aria-label="토글 스위치" role="switch" />
-        <span class="slider"></span>
-      </label>
+    <div class="popup-container">
+      <h1 class="popup-title">Swagger Helper</h1>
+      <div class="toggle-container">
+        <h2 class="toggle-title">태그 전체 접기/펼치기</h2>
+        <label class="toggle">
+          <input type="checkbox" id="toggleSwitch" aria-label="토글 스위치" role="switch" />
+          <span class="slider"></span>
+        </label>
+      </div>
     </div>
+
+    <script src="popup.js"></script>
   </body>
 </html>

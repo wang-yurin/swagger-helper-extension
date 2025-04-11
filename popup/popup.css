@@ -1,0 +1,10 @@
+.popup-container {
+  padding: 1.4rem;
+  width: 20rem;
+}
+
+.popup-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
