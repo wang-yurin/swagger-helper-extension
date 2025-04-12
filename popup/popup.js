@@ -10,9 +10,14 @@ toggleButton.addEventListener('change', (e) => {
     },
   };
 
-  async function sendMessageToContentScript(message) {
-    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-    const res = await chrome.tabs.sendMessage(tab.id, message);
-  }
-  sendMessageToContentScript(message);
+  chrome.tabs.query({ active: true, currentWindow: true }, ([tab]) => {
+    if (tab) {
+      chrome.tabs.sendMessage(tab.id, message, (response) => {
+        if (chrome.runtime.lastError) {
+          console.error('error:', chrome.runtime.lastError);
+          return;
+        }
+      });
+    }
+  });
 });
